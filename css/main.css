@@ -1,0 +1,21 @@
+/*!
+ * Bootstrap v3.3.4 (http://getbootstrap.com)
+ * Copyright 2011-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+.main-author{
+	float: right;
+}
+.main-btn-new{
+	float: right;
+}
+#map { 
+	height: 500px; 
+}

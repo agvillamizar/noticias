@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="page-header">
+        <button type="button" class="btn btn-default btn-lg main-btn-new">
+  		 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Nueva Noticia
+		</button>
+        <h1 id="timeline">Últimas Noticias</h1>
+    </div>
+    <ul class="timeline">
+        <li ng-repeat="news in newsList" ng-class-even="'timeline-inverted'">
+          <div class="timeline-badge success"><i class="glyphicon glyphicon-road"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <div>
+              	<span class="label label-primary main-author">{{news.author}}</span>
+              	<h4 class="timeline-title">{{news.title}}</h4>
+              </div>
+              <small class="text-muted"><i class="glyphicon glyphicon-time"></i> 11 hours ago via Twitter</small>
+            </div>
+            <div class="timeline-body">
+              <p>{{news.body}}</p>
+            </div>
+            <hr>
+          </div>
+        </li>
+    </ul>
+</div>
