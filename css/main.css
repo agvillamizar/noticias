@@ -5,17 +5,31 @@
  */
 body {
   padding-top: 50px;
+  height: 100%;
+}
+html{
+	height: 100%;
 }
 .starter-template {
-  padding: 40px 15px;
+  //padding: 40px 15px;
   text-align: center;
 }
+
+#map {
+	height: 100%;
+}
+
 .main-author{
 	float: right;
 }
 .main-btn-new{
 	float: right;
 }
-#map { 
-	height: 500px; 
+
+.main-fill
+{
+    min-height: 100%;
+    height: 100%;
+    width: 100%;
+    min-width: 100%;
 }

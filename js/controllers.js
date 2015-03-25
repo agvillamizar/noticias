@@ -43,21 +43,19 @@
 
      var map = L.map('map').setView([10.4186, -75.5209], 15);
 
-    L.tileLayer('http://{s}.tiles.mapbox.com/v3/examples.map-20v6611k/{z}/{x}/{y}.png', {
-      attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+    L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> Contributors',
       maxZoom: 18
     }).addTo(map);
 
      var marker = L.marker([10.4186, -75.5209]).addTo(map);
     
-    }]);
+    }])
 
-    /*.controller('TabsController', function () {
-      this.tab = 1;
-
-      this.selectTab = function (tab) {
-        this.tab = tab;
+    .controller('HeaderController', function () {
+      $scope.isActive = function (viewLocation) { 
+        return viewLocation === $location.path();
       };
-    });*/
+    })
 
 })();

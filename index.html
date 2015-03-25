@@ -13,7 +13,8 @@
     <title>Noticias</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.4/united/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
@@ -42,9 +43,10 @@
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#/">Muro de Noticias</a></li>
-                    <li><a href="#/map">Mapa de Noticias</a></li>
-                    <li><a href="#contact">Contacto</a></li>
+                    <li ng-class="{ active: isActive('/')}"><a href="#/"><span class="glyphicon glyphicon-star
+                    -empty" aria-hidden="true"></span> Muro de Noticias</a></li>
+                    <li ng-class="{ active: isActive('/map')}"><a href="#/map"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span> Mapa de Noticias</a></li>
+                    <li><a href="#contact"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> Contacto</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
@@ -63,11 +65,7 @@
         </div>
     </nav>
 
-    <div class="container">
-
-        <div ng-view class="starter-template"></div>
-
-    </div>
+    <div ng-view class="starter-template main-fill"></div>
     <!-- /.container -->
 
 
